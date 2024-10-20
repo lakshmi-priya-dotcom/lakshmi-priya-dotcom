@@ -1,0 +1,256 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Bumerang';
+    src: url('../fonts/Bumerang-Regular.ttf') format('truetype'); /* Adjust file name and type if needed */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Queensila';
+    src: url('../fonts/Queensila.ttf') format('truetype'); /* Adjust file name and type if needed */
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Body Styling */
+/* Body Styling */
+body {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack children vertically */
+    min-height: 100vh; /* Ensure body takes full viewport height */
+    font-family: 'Queensila'; /* Vintage feel */
+    background-color: #d7d0b1; /* Warm background color */
+    color: #3e2f1b; /* Dark brown for text */
+}
+
+
+/* Header Styling */
+header {
+    background-color: #794a3a; /* Warm brown color */
+    padding: 20px 40px;
+    position: relative;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Menu Styling */
+.menu {
+    list-style: none;
+    display: flex;
+}
+
+.menu li {
+    margin-right: 20px;
+}
+
+.menu li a {
+    text-decoration: none; /* Remove underline from links */
+    color: #faca78; /* Set text color */
+    font-size: 20px; /* Set font size */
+    position: relative; /* Position for pseudo-element */
+    transition: color 0.5s; /* Smooth color transition */
+    letter-spacing: 1px; /* Adjust space between letters */
+}
+
+.menu li a:hover {
+    color: #f57f5b; /* Slight color change on hover */
+}
+
+/* Underline animation on hover */
+.menu li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #f57f5b;
+    transition: width 0.3s;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+}
+
+.menu li a:hover::after {
+    width: 100%; /* Full underline on hover */
+}
+
+/* Logo (Name) Styling */
+.heading h1 {
+    font-family: 'Bumerang';
+    font-weight: normal; /* Adjust weight if necessary */
+    color: #faca78; /* Same cream color */
+    font-size: 100px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 1px; /* Adjust space between letters */
+}
+
+/* Main Content Styling */
+main {
+    padding: 20px 40px; /* Padding around main content */
+}
+
+/* Common Heading Styles for Main Sections */
+main h2 {
+    font-size: 36px; /* Large heading for all main sections */
+    color: #3e2f1b; /* Dark brown color */
+    margin-bottom: 20px; /* Space below headings */
+    text-align: center; /* Center align headings */
+}
+
+/* Paragraph Styling */
+main p {
+    font-size: 18px; /* Standard font size for paragraphs */
+    line-height: 1.6; /* Improved readability */
+    margin-bottom: 20px; /* Space below paragraphs */
+    text-align: justify; /* Justified text for neatness */
+}
+
+/* Blog Page Specific Styles */
+.blog-section {
+    margin-top: 40px; /* Additional margin for blog section */
+}
+
+.blog-post {
+    background-color: #f9f2e7; /* Light background for blog posts */
+    padding: 20px; /* Padding for posts */
+    margin-bottom: 20px; /* Space between posts */
+    border-radius: 8px; /* Rounded corners */
+}
+
+.blog {
+    text-align: center;
+}
+
+/* Shop Page Specific Styles */
+.shop-section {
+    margin-top: 40px; /* Additional margin for shop section */
+}
+
+.product {
+    display: flex; /* Flexbox for product display */
+    justify-content: space-between; /* Space between elements */
+    margin-bottom: 20px; /* Space between products */
+    padding: 20px; /* Padding for products */
+    background-color: #f9f2e7; /* Light background for products */
+    border-radius: 8px; /* Rounded corners */
+}
+
+/* About Page Specific Styles */
+.about-section {
+    margin-top: 40px; /* Additional margin for about section */
+    text-align: center; /* Center align content */
+}
+
+.about-section img {
+    max-width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners for images */
+}
+
+.about {
+    text-align: center;
+}
+
+
+/* Categories Section */
+.categories {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-around; /* Space categories evenly */
+    flex-wrap: wrap; /* Allow wrapping of categories on smaller screens */
+    margin-top: 20px; /* Space above categories */
+}
+
+/* Individual Category */
+.category {
+    width: 200px; /* Width for each category */
+    margin: 10px; /* Margin around each category */
+    text-align: center; /* Center align text */
+}
+
+/* Shop Category Image */
+.category-image {
+    width: 100%; /* Full width of the category box */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners for images */
+}
+
+/* Shop All Button */
+.shop-all {
+    margin-top: 30px; /* Space above the Shop All button */
+}
+
+.shop-all-button {
+    padding: 10px 20px; /* Padding for the button */
+    background-color: #794a3a; /* Background color */
+    color: #faca78; /* Text color */
+    text-decoration: none; /* Remove underline */
+    font-size: 18px; /* Font size */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.shop-all-button:hover {
+    background-color: #f57f5b; /* Change background color on hover */
+}
+
+/* Footer Styling */
+footer {
+    position: relative; /* Keep it in the normal flow */
+    width: 100%; /* Full width */
+    padding: 10px 0; /* Adjust top and bottom padding */
+    text-align: center; /* Center text */
+    margin-top: auto; /* Push footer to the bottom of the page */
+}
+
+/* Footer Paragraph Styling */
+footer p {
+    line-height: 1; /* Set line height to reduce space */
+    font-size: 15px; /* Adjust font size as needed */
+    display: inline; /* Make it inline to reduce spacing */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack menu on smaller screens */
+        align-items: flex-start; /* Align items to start */
+    }
+
+    .menu {
+        flex-direction: column; /* Vertical menu */
+        margin-top: 10px; /* Margin above menu */
+    }
+
+    .menu li {
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 10px; /* Space below menu items */
+    }
+
+    .logo h1 {
+        font-size: 60px; /* Adjust logo size for smaller screens */
+    }
+
+    main {
+        padding: 10px; /* Reduce padding for main content */
+    }
+
+    main h2 {
+        font-size: 28px; /* Smaller heading for mobile */
+    }
+
+    main p {
+        font-size: 16px; /* Smaller text for mobile */
+    }
+}
