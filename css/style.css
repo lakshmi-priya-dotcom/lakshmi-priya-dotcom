@@ -19,21 +19,32 @@
     font-style: normal;
 }
 
-/* Body Styling */
+@font-face {
+    font-family: 'SimplyMono';
+    src: url('../fonts/SimplyMono-Bold.ttf') format('truetype'); /* Adjust file name and type if needed */
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* Body Styling */
 body {
     display: flex; /* Use flexbox for layout */
     flex-direction: column; /* Stack children vertically */
     min-height: 100vh; /* Ensure body takes full viewport height */
-    font-family: 'Queensila'; /* Vintage feel */
-    background-color: #d7d0b1; /* Warm background color */
+    font-family: 'Inconsolata'; /* Vintage feel */
+    background-color: #f8eecb; /* Warm background color */
     color: #3e2f1b; /* Dark brown for text */
+}
+
+/* Main content will take up remaining space */
+main {
+    flex: 1; /* Flex-grow to ensure main takes up the available space */
 }
 
 
 /* Header Styling */
 header {
-    background-color: #794a3a; /* Warm brown color */
+    background-color: #1e4380; /* blue */
     padding: 20px 40px;
     position: relative;
 }
@@ -56,7 +67,7 @@ header {
 
 .menu li a {
     text-decoration: none; /* Remove underline from links */
-    color: #faca78; /* Set text color */
+    color: #faca78; /* Yellow */
     font-size: 20px; /* Set font size */
     position: relative; /* Position for pseudo-element */
     transition: color 0.5s; /* Smooth color transition */
@@ -98,14 +109,12 @@ header {
 
 /* Main Content Styling */
 main {
-    padding: 20px 40px; /* Padding around main content */
+    padding: 20px 0px; /* Padding around main content */
 }
 
 /* Common Heading Styles for Main Sections */
 main h2 {
-    font-size: 36px; /* Large heading for all main sections */
-    color: #3e2f1b; /* Dark brown color */
-    margin-bottom: 20px; /* Space below headings */
+     /* Large heading for all main sections */
     text-align: center; /* Center align headings */
 }
 
@@ -114,12 +123,59 @@ main p {
     font-size: 18px; /* Standard font size for paragraphs */
     line-height: 1.6; /* Improved readability */
     margin-bottom: 20px; /* Space below paragraphs */
-    text-align: justify; /* Justified text for neatness */
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+    color: #333;}
+
+/* Parallax background */
+.parallax-background {
+    /* Set the background image */
+    background-image: url('../images/Parallalax\ bg\ 2.png'); 
+    /* #1e4380 blue #e2b2b4 pink */
+    
+    /* Make sure it covers the whole area */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+.parallax-text {
+    text-align: center;
+    background-color: #1e4380; 
+    color: #faca78; 
+    padding: 85px;
+    display: inline-block;
+    z-index: 10;
+    border-radius: 10px;
+    animation: appear 5s;
+    animation-timeline: view();
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+section {
+    margin-top: 50px; /* Adjust as necessary for spacing */
 }
 
 /* Blog Page Specific Styles */
 .blog-section {
-    margin-top: 40px; /* Additional margin for blog section */
+    margin-top: 40px;
 }
 
 .blog-post {
@@ -186,39 +242,25 @@ main p {
     border-radius: 10px; /* Rounded corners for images */
 }
 
-/* Shop All Button */
-.shop-all {
-    margin-top: 30px; /* Space above the Shop All button */
-}
-
-.shop-all-button {
-    padding: 10px 20px; /* Padding for the button */
-    background-color: #794a3a; /* Background color */
-    color: #faca78; /* Text color */
-    text-decoration: none; /* Remove underline */
-    font-size: 18px; /* Font size */
-    border-radius: 5px; /* Rounded corners */
-    transition: background-color 0.3s; /* Smooth background transition */
-}
-
-.shop-all-button:hover {
-    background-color: #f57f5b; /* Change background color on hover */
+.category a{
+    text-decoration: none; /* Remove underline from links */
+    color: #3e2f1b; /* Set text color */
+    font-size: 20px; /* Set font size */
+    position: relative; /* Position for pseudo-element */
+    transition: color 0.5s; /* Smooth color transition */
+    letter-spacing: 1px; /* Adjust space between letters */
 }
 
 /* Footer Styling */
 footer {
-    position: relative; /* Keep it in the normal flow */
-    width: 100%; /* Full width */
-    padding: 10px 0; /* Adjust top and bottom padding */
-    text-align: center; /* Center text */
-    margin-top: auto; /* Push footer to the bottom of the page */
-}
+    text-align: center; /* Center the text */
+    padding: 10px 0; /* Padding for spacing */}
 
-/* Footer Paragraph Styling */
 footer p {
-    line-height: 1; /* Set line height to reduce space */
-    font-size: 15px; /* Adjust font size as needed */
-    display: inline; /* Make it inline to reduce spacing */
+    color: #3e2f1b; /* Change to a contrasting color */
+    font-size: 14px; /* Set an appropriate font size */
+    margin: 0; /* Remove default margin */
+    line-height: 1; /* Reduce extra space */
 }
 
 /* Responsive Styles */
@@ -253,4 +295,5 @@ footer p {
     main p {
         font-size: 16px; /* Smaller text for mobile */
     }
+    
 }
